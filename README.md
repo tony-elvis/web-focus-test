@@ -81,10 +81,30 @@ npm run deploy
 
 ## 🔧 Variables de Entorno
 
-Crear archivo `.env` en la raíz:
+### Desarrollo Local
+
+Edita el archivo `.env` en la raíz:
 ```env
-VITE_API_URL=tu_api_url
+VITE_BACKEND_URL=http://localhost:3001
 ```
+
+### Deploy en Vercel
+
+1. Ve a tu proyecto en Vercel Dashboard
+2. Settings → Environment Variables
+3. Agrega:
+   - **Name**: `VITE_BACKEND_URL`
+   - **Value**: `https://tu-app-backend.herokuapp.com`
+   - **Environment**: Production (y opcionalmente Preview y Development)
+4. Redeploy el proyecto
+
+### Deploy en Netlify
+
+1. Ve a Site settings → Environment variables
+2. Agrega:
+   - **Key**: `VITE_BACKEND_URL`
+   - **Value**: `https://tu-app-backend.herokuapp.com`
+3. Redeploy el sitio
 
 ## 📝 Scripts Disponibles
 
